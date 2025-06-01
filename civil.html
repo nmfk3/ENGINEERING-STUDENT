@@ -5,25 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>الهندسة المدنية</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* تنسيق التبويبات */
+    .tabs {
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+      padding: 20px;
+    }
+    .tab-buttons {
+      display: flex;
+      gap: 10px;
+      border-bottom: 2px solid #0a9396;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .tab-buttons button {
+      flex: 1;
+      padding: 10px;
+      cursor: pointer;
+      background-color: #0a9396;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px 5px 0 0;
+      transition: background-color 0.3s ease;
+    }
+    .tab-buttons button.active {
+      background-color: #005f73;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    /* محتويات داخل التبويبات */
+    ul {
+      list-style: disc inside;
+      padding-right: 0;
+    }
+    a {
+      color: #0a9396;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="engineering-logo.png" alt="شعار كلية الهندسة" class="logo" />
     <h1>الهندسة المدنية - Civil Engineering</h1>
     <nav>
-      <a href="index.html">الرئيسية</a>
+      <a href="index.html" class="btn-back">الرئيسية</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>محاضرات وملفات الهندسة المدنية</h2>
-      <ul>
-        <li><a href="#">ملف الخرسانة المسلحة</a></li>
-        <li><a href="#">ملف تصميم الأساسات</a></li>
-        <li><a href="#">فيديوهات تعليمية</a></li>
-      </ul>
-    </section>
+    <div class="tabs">
+      <div class="tab-buttons">
+        <button class="active" data-tab="tab1">المصطلحات</button>
+        <button data-tab="tab2">الشروحات</button>
+        <button data-tab="tab3">مقاطع</button>
+        <button data-tab="tab4">المصادر</button>
+        <button data-tab="tab5">الملفات</button>
+      </div>
+
+      <div id="tab1" class="tab-content active">
+        <h2>مصطلحات الهندسة المدنية</h2>
+        <ul>
+          <li>حمل موزع (Distributed Load)</li>
+          <li>عزم الانحناء (Moment)</li>
+          <li>قص (Shear)</li>
+          <li>الخرسانة المسلحة (Reinforced Concrete)</li>
+          <li>الأساسات (Foundations)</li>
+        </ul>
+      </div>
+
+      <div id="tab2" class="tab-content">
+        <h2>شروحات مهمة</h2>
+        <ul>
+          <li><a href="#">شرح تحليل الأحمال في الهياكل</a></li>
+          <li><a href="#">مبادئ تصميم الأعمدة</a></li>
+          <li><a href="#">أساسيات الرسم الهندسي</a></li>
+        </ul>
+      </div>
+
+      <div id="tab3" class="tab-content">
+        <h2>مقاطع فيديو تعليمية</h2>
+        <ul>
+          <li><a href="#">مقطع فيديو عن الخرسانة</a></li>
+          <li><a href="#">مقطع فيديو تصميم الجسور</a></li>
+          <li><a href="#">مقطع فيديو عن التحليل الإنشائي</a></li>
+        </ul>
+      </div>
+
+      <div id="tab4" class="tab-content">
+        <h2>مصادر وكتب</h2>
+        <ul>
+          <li><a href="#">كتاب أساسيات الهندسة المدنية</a></li>
+          <li><a href="#">موقع Engineering Toolbox</a></li>
+          <li><a href="#">دروس من جامعة كركوك</a></li>
+        </ul>
+      </div>
+
+      <div id="tab5" class="tab-content">
+        <h2>ملفات للتحميل</h2>
+        <ul>
+          <li><a href="#">ملف PDF عن الخرسانة المسلحة</a></li>
+          <li><a href="#">نماذج حسابات تحليل الأحمال</a></li>
+          <li><a href="#">مذكرة مشاريع تخرج</a></li>
+        </ul>
+      </div>
+    </div>
   </main>
+
+  <script>
+    // جافاسكربت لتبديل التبويبات
+    const buttons = document.querySelectorAll('.tab-buttons button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // إزالة class active من الكل
+        buttons.forEach(btn => btn.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+
+        // إضافة active للزر والمحتوى المحدد
+        button.classList.add('active');
+        const tabId = button.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
