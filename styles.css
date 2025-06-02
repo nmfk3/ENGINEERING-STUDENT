@@ -32,6 +32,47 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}.courses-by-stage {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #e0f2f1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.courses-by-stage h2 {
+  text-align: center;
+  color: #005f73;
+  margin-bottom: 20px;
+}
+
+.stage {
+  margin-bottom: 20px;
+}
+
+.stage h3 {
+  background-color: #0a9396;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.stage ul {
+  list-style: none;
+  padding-left: 15px;
+}
+
+.stage ul li {
+  margin: 5px 0;
+}
+
+.stage ul li a {
+  color: #005f73;
+  text-decoration: none;
+}
+
+.stage ul li a:hover {
+  text-decoration: underline;
 }
 
 nav li {
