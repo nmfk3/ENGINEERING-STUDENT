@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>جيلوجي - Geological</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .tabs {
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+      padding: 20px;
+    }
+    .tab-buttons {
+      display: flex;
+      gap: 10px;
+      border-bottom: 2px solid #0a9396;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .tab-buttons button {
+      flex: 1;
+      padding: 10px;
+      cursor: pointer;
+      background-color: #0a9396;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px 5px 0 0;
+      transition: background-color 0.3s ease;
+    }
+    .tab-buttons button.active {
+      background-color: #005f73;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>جيلوجي - Geological</h1>
+    <nav>
+      <a href="../civil.html" class="btn-back">رجوع إلى صفحة الهندسة المدنية</a>
+    </nav>
+  </header>
+
+  <main class="tabs">
+    <div class="tab-buttons">
+      <button class="active" data-tab="videos">المقاطع</button>
+      <button data-tab="notes">الملازم</button>
+      <button data-tab="sources">المصادر</button>
+      <button data-tab="terms">المصطلحات</button>
+    </div>
+
+    <div id="videos" class="tab-content active">
+      <ul>
+        <li><a href="#">فيديو 1</a></li>
+        <li><a href="#">فيديو 2</a></li>
+      </ul>
+    </div>
+
+    <div id="notes" class="tab-content">
+      <ul>
+        <li><a href="#">ملزمة الفصل الأول</a></li>
+      </ul>
+    </div>
+
+    <div id="sources" class="tab-content">
+      <ul>
+        <li><a href="#">الكتاب المقرر</a></li>
+      </ul>
+    </div>
+
+    <div id="terms" class="tab-content">
+      <ul>
+        <li>Line — خط</li>
+        <li>Scale — مقياس</li>
+      </ul>
+    </div>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-buttons button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+
+        button.classList.add('active');
+        document.getElementById(button.getAttribute('data-tab')).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
