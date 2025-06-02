@@ -1,57 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>📘 رياضيات 1 - Mathematics I</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header style="background-color: #004080; color: white; padding: 20px; text-align: center;">
-    <h2>📘 رياضيات 1 - <br> Mathematics I</h2>
-    <a href="civil.html" style="color: white; background-color: #007bff; padding: 8px 16px; text-decoration: none; border-radius: 5px; display: inline-block;">🔙 رجوع إلى صفحة الهندسة المدنية</a>
-  </header>
-
-  <main style="padding: 20px;">
-    <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 20px;">
-      <button onclick="showTab('videos')">📹 المقاطع</button>
-      <button onclick="showTab('notes')">📄 الملازم</button>
-      <button onclick="showTab('sources')">📚 المصادر</button>
-      <button onclick="showTab('terms')">📘 المصطلحات</button>
-    </div>
-
-    <div id="videos" class="tab">
-      <ul>
-        <li><a href="#">فيديو 1</a></li>
-        <li><a href="#">فيديو 2</a></li>
-      </ul>
-    </div>
-
-    <div id="notes" class="tab" style="display:none;">
-      <ul>
-        <li><a href="#">ملزمة الشرح الكامل PDF</a></li>
-      </ul>
-    </div>
-
-    <div id="sources" class="tab" style="display:none;">
-      <ul>
-        <li><a href="#">كتاب رياضيات 1 الرسمي</a></li>
-      </ul>
-    </div>
-
-    <div id="terms" class="tab" style="display:none;">
-      <ul>
-        <li>Derivative - المشتقة</li>
-        <li>Integral - التكامل</li>
-      </ul>
-    </div>
-  </main>
-
-  <script>
-    function showTab(tabId) {
-      const tabs = document.querySelectorAll('.tab');
-      tabs.forEach(tab => tab.style.display = 'none');
-      document.getElementById(tabId).style.display = 'block';
-    }
-  </script>
-</body>
-</html>
