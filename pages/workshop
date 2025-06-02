@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>رسم هندسي - Engineering Drawing</title>
+  <title>الورش - workshop</title>
   <link rel="stylesheet" href="../styles.css" />
   <style>
     .tabs {
@@ -45,7 +45,7 @@
 </head>
 <body>
   <header>
-    <h1>📘 رسم هندسي - Engineering Drawing</h1>
+    <h1>الورش - workshop</h1>
     <nav>
       <a href="../civil.html" class="btn-back">رجوع إلى صفحة الهندسة المدنية</a>
     </nav>
