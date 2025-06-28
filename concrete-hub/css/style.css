@@ -86,3 +86,8 @@ footer {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
 }
+
+@media (max-width: 768px) {
+    nav ul { flex-direction: column; }
+    .container { width: 95%; }
+}
