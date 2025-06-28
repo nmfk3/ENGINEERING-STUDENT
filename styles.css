@@ -1,106 +1,64 @@
+/* الأساسيات */
+:root {
+    --primary: #2c3e50;
+    --secondary: #e74c3c;
+    --light-bg: #f9f9f9;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  direction: rtl;
-  background-color: #f0f2f5;
-  color: #333;
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    background-color: var(--light-bg);
 }
 
+h1, h2, h3 {
+    font-family: 'Rubik', sans-serif;
+    color: var(--primary);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* الهيدر */
 header {
-  background-color: #004080;
-  color: white;
-  text-align: center;
-  padding: 20px;
+    background-color: var(--primary);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
 }
 
-.logo {
-  width: 90px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
+/* التنقل */
 nav {
-  background-color: #0066cc;
-  padding: 10px;
+    background-color: #34495e;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}.courses-by-stage {
-  max-width: 900px;
-  margin: 40px auto;
-  background-color: #e0f2f1;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.courses-by-stage h2 {
-  text-align: center;
-  color: #005f73;
-  margin-bottom: 20px;
-}
-
-.stage {
-  margin-bottom: 20px;
-}
-
-.stage h3 {
-  background-color: #0a9396;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.stage ul {
-  list-style: none;
-  padding-left: 15px;
-}
-
-.stage ul li {
-  margin: 5px 0;
-}
-
-.stage ul li a {
-  color: #005f73;
-  text-decoration: none;
-}
-
-.stage ul li a:hover {
-  text-decoration: underline;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav li {
-  margin: 0 10px;
+    margin: 0 1rem;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    display: block;
 }
 
-nav a:hover {
-  background-color: #0052a3;
-}
-
-main {
-  padding: 20px;
-  background-color: white;
-  margin: 20px;
-  border-radius: 10px;
-}
-
+/* الفوتر */
 footer {
-  background-color: #004080;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
 }
