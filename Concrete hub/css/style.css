@@ -1,0 +1,64 @@
+/* الأساسيات */
+:root {
+    --primary: #2c3e50;
+    --secondary: #e74c3c;
+    --light-bg: #f9f9f9;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    background-color: var(--light-bg);
+}
+
+h1, h2, h3 {
+    font-family: 'Rubik', sans-serif;
+    color: var(--primary);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* الهيدر */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* التنقل */
+nav {
+    background-color: #34495e;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+/* الفوتر */
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
